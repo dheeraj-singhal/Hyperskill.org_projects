@@ -79,3 +79,54 @@ while tries < 8:
 
 print("""Thanks for playing!
 We'll see how well you did in the next stage """)
+
+
+# Stage 6
+
+import random
+
+print("H A N G M A N")
+
+wordlist = ['python', 'java', 'kotlin', 'javascript']
+pattern = random.choice(wordlist)
+random_word = list(pattern)
+hyphens_num = list('-' * len(random_word))
+
+hyphens_count = hyphens_num.count("-")
+hyphens_join = ''.join(hyphens_num)
+
+tries = 8
+selected = set()
+
+while hyphens_count > 0 and tries > 0:
+    print()
+    print(hyphens_join)
+    guess = input("Input the letter: ")
+    if guess in pattern and guess not in selected:
+        for i in range(len(pattern)):
+            if guess == pattern[i]:
+                hyphens_num[i] = pattern[i]
+                hyphens_count -= 1
+                if guess not in selected:
+                    selected.add(guess)
+
+    elif guess in selected:
+        tries -= 1
+        if tries >= 0:
+            print("No improvements")
+
+    elif tries > 0 and guess not in pattern:
+        print("No such letter in the word")
+        tries -= 1
+    hyphens_join = "".join(hyphens_num)
+
+if tries != 0 and hyphens_count == 0:
+        print(pattern)
+        print("You guessed the word!")
+        print("You survived!")
+elif tries == 0 and hyphens_count == 0:
+        print(pattern)
+        print("You guessed the word!")
+        print("You survived!")
+else:
+        print("You are hanged!")
