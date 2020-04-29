@@ -24,3 +24,16 @@ if name == random.choice(language):
     print("You survived!")
 else:
     print("You are hanged!")
+
+
+# Stage 4
+
+import random
+language = ['python', 'java', 'kotlin', 'javascript']
+print('H A N G M A N')
+hidden = random.choice(language)
+name = input(f"Guess the word {hidden[0:3]+'-'*(len(hidden)-3)}:")
+if name == hidden:
+    print("You survived!")
+else:
+    print("You are hanged!")
