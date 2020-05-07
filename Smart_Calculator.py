@@ -35,3 +35,18 @@ while True:
     else:
         ls = [int(i) for i in a.split(" ")]
         print(int(sum(ls)))
+
+
+# Stage 4
+
+while True:
+    a = input()
+    if a == "":
+        continue
+    elif a == "/help":
+        print("The program calculates the sum of numbers")
+    elif a == "/exit":
+        print("Bye!")
+        break
+    else:
+        print(eval(a))
