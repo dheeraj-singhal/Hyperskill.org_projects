@@ -50,3 +50,26 @@ while True:
         break
     else:
         print(eval(a))
+
+
+# Stage 5
+
+while True:
+    a = input()
+    if a == "":
+        continue
+    elif a == "/help":
+        print("The program calculates the sum of numbers")
+    elif a == "/exit":
+        print("Bye!")
+        break
+    else:
+        try:
+            print(eval(a))
+        except SyntaxError:
+            if a.startswith("/"):
+                print("Unknown command")
+            else:
+                print("Invalid expression")
+        except NameError:
+            print("Invalid expression")
