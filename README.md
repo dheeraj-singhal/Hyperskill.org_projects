@@ -1,6 +1,6 @@
 # Hyperskill.org Projects
 ## Table of Content
-* [Hangman](#Hangman)
+* [Hangman](https://github.com/dheeraj-singhal/Hyperskill.org_projects/blob/master/Hangman.py)
 * [Simple Chatty Bot](#Simple-Chatty-Bot)
 * [Simple Calculator](#Simple-Calculator)
 * [Tic-Tac-Toe](#Tic-Tac-Toe)
